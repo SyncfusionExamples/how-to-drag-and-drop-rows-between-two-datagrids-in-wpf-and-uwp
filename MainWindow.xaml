@@ -1,0 +1,62 @@
+﻿<Window x:Class="DragandDropDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DragandDropDemo"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="Customizing GridHeaderCell Icon" Height="710" Width="1024" WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <local:UserInfoViewModel />
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <syncfusion:SfDataGrid x:Name="dataGrid1" Grid.Column="0"
+                               AllowEditing="True"
+                               ColumnSizer="Star"
+                               AllowDraggingRows="True"
+                               AllowDrop="True"
+                               AutoGenerateColumns="False"
+                               SelectionMode="Multiple"
+                               SelectionUnit="Row"
+                               LiveDataUpdateMode="AllowDataShaping"
+                               ItemsSource="{Binding UserDetails}" 
+                               ShowRowHeader="True">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn HeaderText="User ID" MappingName="UserId"  />
+                <syncfusion:GridTextColumn MappingName="Name"  />
+                <syncfusion:GridDateTimeColumn MappingName="DateofBirth" Pattern="LongTime" />
+                <syncfusion:GridTextColumn HeaderText="Contact No" MappingName="ContactNo" />
+                <syncfusion:GridCurrencyColumn  MappingName="Salary"  />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+
+        <syncfusion:SfDataGrid x:Name="dataGrid2" Grid.Column="2"
+                                ColumnSizer="Star"
+                                AllowEditing="True"
+                                AllowDraggingRows="True"
+                                AllowDrop="True"
+                                AutoGenerateColumns="False"
+                                SelectionMode="Multiple"
+                                SelectionUnit="Row"
+                                LiveDataUpdateMode="AllowDataShaping"
+                                ItemsSource="{Binding UserDetails1}" 
+                                ShowRowHeader="True">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:GridTextColumn HeaderText="User ID" MappingName="UserId"  />
+                <syncfusion:GridTextColumn MappingName="Name"  />
+                <syncfusion:GridDateTimeColumn MappingName="DateofBirth" Pattern="LongTime" />
+                <syncfusion:GridTextColumn HeaderText="Contact No" MappingName="ContactNo" />
+                <syncfusion:GridCurrencyColumn  MappingName="Salary"  />
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+    </Grid>
+</Window>
