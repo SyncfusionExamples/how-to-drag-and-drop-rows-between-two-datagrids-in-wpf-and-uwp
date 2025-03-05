@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:DragandDropDemo"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
-        Title="Customizing GridHeaderCell Icon" Height="638" Width="1090" WindowStartupLocation="CenterScreen">
+        Title="Drag and Drop" Height="638" Width="1090" WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <local:UserInfoViewModel />
