@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DragandDropDemo</RootNamespace>
     <AssemblyName>DragandDropDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -36,12 +36,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Syncfusion.Data.WPF">
-    </Reference>
-    <Reference Include="Syncfusion.SfGrid.WPF">
-    </Reference>
-    <Reference Include="Syncfusion.Shared.WPF">
-    </Reference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" version="1.1.135" />
+    <PackageReference Include="Syncfusion.Data.WPF" version="28.2.7" />
+    <PackageReference Include="Syncfusion.Licensing" version="28.2.7" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" version="28.2.7" />
+    <PackageReference Include="Syncfusion.Shared.WPF" version="28.2.7" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -62,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Behavior\DragAndDropBehavior.cs" />
     <Compile Include="Model\UserInfo.cs" />
     <Compile Include="Model\UserinfoRepository.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />

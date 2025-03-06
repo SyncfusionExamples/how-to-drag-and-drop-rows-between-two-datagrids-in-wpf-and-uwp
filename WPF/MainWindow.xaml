@@ -3,25 +3,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:DragandDropDemo"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
-        Title="Customizing GridHeaderCell Icon" Height="710" Width="1024" WindowStartupLocation="CenterScreen">
+        Title="Drag and Drop" Height="638" Width="1090" WindowStartupLocation="CenterScreen">
 
     <Window.DataContext>
         <local:UserInfoViewModel />
     </Window.DataContext>
-    
-    <Grid>
+
+    <Grid VerticalAlignment="Top">
+       
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <syncfusion:SfDataGrid x:Name="dataGrid1" Grid.Column="0"
+        <syncfusion:SfDataGrid x:Name="firstGrid" Grid.Column="0"
                                AllowEditing="True"
-                               ColumnSizer="Star"
+                               ColumnSizer="AutoLastColumnFill"
                                AllowDraggingRows="True"
                                AllowDrop="True"
                                AutoGenerateColumns="False"
@@ -29,18 +31,18 @@
                                SelectionUnit="Row"
                                LiveDataUpdateMode="AllowDataShaping"
                                ItemsSource="{Binding UserDetails}" 
-                               ShowRowHeader="True">
+                               ShowRowHeader="True"  >
             <syncfusion:SfDataGrid.Columns>
                 <syncfusion:GridTextColumn HeaderText="User ID" MappingName="UserId"  />
                 <syncfusion:GridTextColumn MappingName="Name"  />
-                <syncfusion:GridDateTimeColumn MappingName="DateofBirth" Pattern="LongTime" />
+                <syncfusion:GridDateTimeColumn MappingName="DateofBirth" HeaderText="Date Of Birth" Pattern="ShortDate" />
                 <syncfusion:GridTextColumn HeaderText="Contact No" MappingName="ContactNo" />
                 <syncfusion:GridCurrencyColumn  MappingName="Salary"  />
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
 
-        <syncfusion:SfDataGrid x:Name="dataGrid2" Grid.Column="2"
-                                ColumnSizer="Star"
+        <syncfusion:SfDataGrid x:Name="secondGrid" Grid.Column="2"
+                                ColumnSizer="AutoLastColumnFill"
                                 AllowEditing="True"
                                 AllowDraggingRows="True"
                                 AllowDrop="True"
@@ -53,10 +55,13 @@
             <syncfusion:SfDataGrid.Columns>
                 <syncfusion:GridTextColumn HeaderText="User ID" MappingName="UserId"  />
                 <syncfusion:GridTextColumn MappingName="Name"  />
-                <syncfusion:GridDateTimeColumn MappingName="DateofBirth" Pattern="LongTime" />
+                <syncfusion:GridDateTimeColumn MappingName="DateofBirth" HeaderText="Date Of Birth" Pattern="ShortDate" />
                 <syncfusion:GridTextColumn HeaderText="Contact No" MappingName="ContactNo" />
                 <syncfusion:GridCurrencyColumn  MappingName="Salary"  />
             </syncfusion:SfDataGrid.Columns>
         </syncfusion:SfDataGrid>
     </Grid>
+    <behavior:Interaction.Behaviors>
+        <local:DragAndDropBehavior/>
+    </behavior:Interaction.Behaviors>
 </Window>
