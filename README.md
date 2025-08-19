@@ -1,6 +1,6 @@
 # How to drag and drop rows between two wpf datagrids
 
-This example illustrates how to drag and drop rows between two [WPF DataGrid](https://www.syncfusion.com/wpf-controls/treegrid).
+This example illustrates how to drag and drop rows between two [WPF DataGrid](https://www.syncfusion.com/wpf-controls/treegrid) and two [UWP DataGrid](https://www.syncfusion.com/uwp-ui-controls/datagrid).
 
 To perform the dragging operation between two datagrid by using the [GridRowDragDropController.DragStart](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridRowDragDropController.html#Syncfusion_UI_Xaml_Grid_GridRowDragDropController_DragStart), [GridRowDragDropController.Drop](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridRowDragDropController.html#Syncfusion_UI_Xaml_Grid_GridRowDragDropController_Drop), [GridRowDragDropController.DragOver](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridRowDragDropController.html#Syncfusion_UI_Xaml_Grid_GridRowDragDropController_DragOver) and [GridRowDragDropController.Dropped](https://help.syncfusion.com/cr/wpf/Syncfusion.UI.Xaml.Grid.GridRowDragDropController.html#Syncfusion_UI_Xaml_Grid_GridRowDragDropController_Dropped) events.
 
