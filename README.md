@@ -87,6 +87,8 @@ private void sfGrid_Dropped(object sender, GridRowDroppedEventArgs e)
 }
 ```
 
+![Drag and drop between DataGrids](DragAndDropBetweenDataGrids.png)
+
 ## UWP
 
 You should enable [AllowDraggingRows](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.Grid.SfDataGrid.html#Syncfusion_UI_Xaml_Grid_SfDataGrid_AllowDraggingRows) and [AllowDrop](https://learn.microsoft.com/en-us/uwp/api/windows.ui.xaml.uielement.allowdrop?view=winrt-22621) property for the DataGrid which are involved in row drag and drop operations.
